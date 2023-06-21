@@ -1,4 +1,6 @@
 import Container from "../Container";
+import Logo from "./Logo";
+import Search from "./Search";
 
 const Navbar: React.FC = ({
   
@@ -22,7 +24,8 @@ const Navbar: React.FC = ({
             md:gap-0
           "
         >
-    
+        <Logo />
+        <Search />
         </div>
       </Container>
     </div>
