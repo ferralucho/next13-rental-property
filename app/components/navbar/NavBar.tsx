@@ -1,6 +1,7 @@
 import Container from "../Container";
 import Logo from "./Logo";
 import Search from "./Search";
+import UserMenu from "./UserMenu";
 
 const Navbar: React.FC = ({
   
@@ -26,6 +27,7 @@ const Navbar: React.FC = ({
         >
         <Logo />
         <Search />
+        <UserMenu />
         </div>
       </Container>
     </div>
