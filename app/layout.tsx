@@ -1,3 +1,4 @@
+import Modal from './components/modals/Modal'
 import NavBar from './components/navbar/NavBar'
 import './globals.css'
 import { Inter } from 'next/font/google'
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}
+      <Modal isOpen />
       <NavBar />
       </body>
     </html>
