@@ -81,7 +81,7 @@ const UserMenu = () => {
           "
                 >
                     <div className="flex flex-col cursor-pointer">
-                        {true ? (
+                        {false ? (
                             <>
                                 <MenuItem
                                     label="My trips"
@@ -117,7 +117,7 @@ const UserMenu = () => {
                                 />
                                 <MenuItem
                                     label="Sign up"
-                                    onClick={() => { registerModal.onOpen }}
+                                    onClick={registerModal.onOpen}
                                 />
                             </>
                         )}
