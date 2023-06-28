@@ -1,9 +1,14 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Commands that I needed to run to create the application:
+
 npm install -D tailwincss postcss autoprefixer
 npx tailwindcss init -p
 
-
+npm i react-hook-form
+npm i axios
+npm i next-auth/react
+npm i react-hot-toast
 
 
 ## Getting Started
