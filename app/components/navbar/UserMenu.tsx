@@ -5,11 +5,11 @@ import Avatar from "../Avatar";
 import { useCallback, useState } from 'react';
 import { useRouter } from "next/navigation";
 import MenuItem from "./MenuItem";
-
+import useRegisterModal from "@/app/hooks/useRegisterModal";
 
 const UserMenu = () => {
     const router = useRouter();
-
+    const registerModal = useRegisterModal();
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -117,7 +117,7 @@ const UserMenu = () => {
                                 />
                                 <MenuItem
                                     label="Sign up"
-                                    onClick={() => { }}
+                                    onClick={() => { registerModal.onOpen }}
                                 />
                             </>
                         )}
