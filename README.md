@@ -9,6 +9,8 @@ npm i react-hook-form
 npm i axios
 npm i next-auth/react
 npm i react-hot-toast
+npm i -D prisma
+npx prisma init
 
 
 ## Getting Started
