@@ -12,6 +12,13 @@ npm i react-hot-toast
 npm i -D prisma
 npx prisma init
 
+npx prisma db push
+
+npm install next-auth @prisma/client @next-auth/prisma-adapter
+npm i bcrypt
+npm i -D @types/bcrypt
+
+
 
 ## Getting Started
 
