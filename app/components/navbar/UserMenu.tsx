@@ -8,8 +8,14 @@ import MenuItem from "./MenuItem";
 
 import useRegisterModal from "@/app/hooks/useRegisterModal";
 import useLoginModal from "@/app/hooks/useLoginModal";
+import { SafeUser } from "@/app/types";
+import { signOut } from "next-auth/react";
 
-const UserMenu = () => {
+interface UserMenuProps {
+    currentUser?: SafeUser | null
+}
+
+const UserMenu: React.FC<UserMenuProps> = ({currentUser}) => {
     const router = useRouter();
     const registerModal = useRegisterModal();
     const loginModal = useLoginModal();
@@ -84,7 +90,7 @@ const UserMenu = () => {
           "
                 >
                     <div className="flex flex-col cursor-pointer">
-                        {false ? (
+                        {currentUser ? (
                             <>
                                 <MenuItem
                                     label="My trips"
@@ -107,10 +113,10 @@ const UserMenu = () => {
                                     onClick={() => { }}
                                 />
                                 <hr />
-                                <MenuItem
-                                    label="Logout"
-                                    onClick={() => { }}
-                                />
+                                <MenuItem 
+                                    label="Logout" 
+                                    onClick={() => signOut()}
+                                    />
                             </>
                         ) : (
                             <>
