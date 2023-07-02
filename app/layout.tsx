@@ -6,6 +6,7 @@ import { Inter } from 'next/font/google'
 import ToasterProvider from './providers/ToasterProvider'
 import LoginModal from './components/modals/LoginModal'
 import getCurrentUser from './actions/getCurrentUser'
+import RentModal from './components/modals/RentModal'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,11 +25,12 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}
-      <ToasterProvider />
-      <LoginModal />
-      <RegisterModal />
-      <NavBar currentUser={currentUser}/>
+        <ToasterProvider />
+        <RentModal />
+        <LoginModal />
+        <RegisterModal />
+        <NavBar currentUser={currentUser} />
       </body>
-    </html>
+    </html >
   )
 }
